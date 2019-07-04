@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path  # Django>=2.0 re_path用于路由规则解析
-from . import view
+from django_demo import view, testdb
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello', view.hello),
-    path('base', view.base)
+    path('base', view.base),
+    path('testdb', testdb.testdb)
 ]
