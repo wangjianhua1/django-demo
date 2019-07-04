@@ -9,6 +9,7 @@ Django基础学习
 ##### 5.1. python manage.py migrate   # 创建表结构auth_* 6张表，django_* 4张表
 ##### 5.2. python manage.py makemigrations TestModel  # 让 Django 知道我们在我们的模型有一些变更
 ##### 5.3. python manage.py migrate TestModel   # 创建表结构 创建出表testmodel_test带有<class Test>定义的字段
+##### 5.4. 如果更换了表结构重新执行5.2-5.3，若表已删除则失败，先去django_migrations里删除相关操作记录，再执行命令(migrate默认只会初始化数据库一次)
 
 
 
