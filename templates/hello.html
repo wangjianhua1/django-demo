@@ -6,5 +6,19 @@
 </head>
 <body>
 <h1>{{ hello }}</h1>
+{# 判断hello值是否为空 #}
+{% ifequal hello '' %}
+    <h1>hello 属性值为空</h1>
+{% else %}
+    <h4>{{ hello }}</h4>
+{% endifequal %}
+
+{{ hello|lower }}
+{{ hello|first|upper }}
+
+{% block mainbody %}
+    <p>original</p>
+{% endblock %}
+{% include 'nav.html' %}
 </body>
 </html>
